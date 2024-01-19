@@ -1,0 +1,92 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    margin: 20px;
+}
+
+.view-toggle button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#content-area {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .view-toggle button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.both-view {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.both-view img {
+    max-width: 45%;
+    height: auto;
+}
+
+#both-view {
+    display: flex;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    #both-view {
+        flex-direction: column;
+    }
+
+    #text-content, #image-content {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+#text-content, #image-content {
+    flex: 1; /* Each child takes up equal space */
+    max-width: 50%; /* Limit the width to half of the parent container */
+}
+
+#text-content{
+    height: 1098px;
+    font-size: small;
+}
+
+#text-content div{
+    position: absolute;
+}
+
+#image-content img {
+    width: 100%; /* Scale the image to fit the container width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+#highlight-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+
